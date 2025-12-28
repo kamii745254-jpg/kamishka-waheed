@@ -3,76 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> class no 10 </title>
-    <style>
-        *{
-            padding: 0px;
-            margin: 0px;
-            overflow-x: scroll;
-        }
-        .main{
+    <title>class no 11</title>
+    <!-- internal styling -->
+     <style>
+        .card1{
+            max-width: 800px ;
             background-color: red;
-            color: white;
-            padding: 10px;
-            border: 10px dashed black;
-            width: 500px;
-            height: 500px;
-            overflow: auto;
+        }
+        .card2{
+            background-color: green;
+            width: 200px;
+             margin: auto;    /* margin auto is only used when width id already define   */
+        }
+        .card3{
+            background-color: yellow;
+            min-width: 500px;
+            float: right;
+        }
+        div h1{
+            background-color: purple;
+            
+        }
+        .box h3{
+            background-color: black;
+            color: aliceblue;
+            padding: 50px;
+            margin: 50px;
+            font-weight: 2000px;
             font-size: 100px;
         }
-        .overflow{
-             background-color: red;
-            color: white;
-            padding: 10px;
-            border: 10px dotted black;
-            width: 500px;
-            height: 1200px;
-            margin-top: 30px;
-            overflow: scroll;
-            font-size: 100px;
-        }
-        .h1{
-            font-family: Poppins;
-font-weight: 700;
-font-style: Bold;
-font-size: 50px;
-leading-trim: NONE;
-line-height: 65px;
-letter-spacing: 0%;
-
-        }
-    </style>
-
+     </style>
 </head>
-<body >
-    <p><b> PRACTICE PORTION OF CLASS 10</b></p>
-    <!-- overflow : hidden (cant scroll in it)-->
-     <!-- overflow : scroll -->
-      <!-- overflow:visible (by default same) -->
-       <!-- overflow : auto  -->
-        <div class="main">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis laudantium, temporibus incidunt illo fugiat exercitationem! Eaque cupiditate accusamus hic. Fugit eligendi deserunt optio non sed error labore ea corrupti nostrum!</p>
+<body>
+    <!-- max width (800px less) and min (width 300px increase)-->
+     <!-- responsive (large , laptop , tablet , mobile ) -->
+      <!-- max width , min width , width define in percentage -->
+       <!-- combinators -->
 
+       <!-- <div><h1> 
+            heading no 1
+        </h1></div> -->
+
+        <div class="box">
+            <h1>heading 1</h1>
+            <h2>heading 2</h2>
+            <h3>heading 3</h3>
+            <h4>heading 4</h4>
         </div>
-        <div class="overflow">
-            <p>The CSS overflow Property
-The CSS overflow property controls what happens to content that is too big to fit into an area.
 
-It specifies whether to clip the content or to add scrollbars when the content of an element is too big.
-
-The overflow property has the following values:
-
-visible - Default. The overflow is not clipped. The content renders outside the element's box
-hidden - The overflow is clipped, and the rest of the content is hidden
-scroll - Scrollbars are added. User must scroll to see all content
-auto - Similar to scroll, but adds scrollbars only when necessary</p>
-            </div>
-
-        <h1> <b> CLASS 10 START FROM HERE </b></h1>
-        <h1 class="h1"> Increase Your <br>Customers Loyalty <br>and Satisfacation</h1>
-         <p>We help businesses like yours earn more customers, standout from competitors,  make more money</p>
-         <button>Get Started</button>
-         <img src=""
-
+      <div class="card1">
+            <p>card no 1 (max width)</p>
+      </div>
+      <div class="card2">
+             <p>card no 2 (simple width)</p>
+      </div>
+      <div class="card3">
+        <p>card no 3 (min width)</p>
+      </div>
+     
 </body>
 </html>
