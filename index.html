@@ -3,118 +3,545 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>task no 8</title>
     <style>
-        *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
     font-family: Arial, sans-serif;
 }
 
 body{
-    background: #000;
+    background:#f2f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
 }
 
-/* MAIN SECTION */
-.exchange-section{
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #4facfe, #4b7bec);
-    text-align: center;
-    color: #fff;
-}
-
-/* HEADING */
-.exchange-section h2{
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-/* CARD CONTAINER */
-.card-container{
-    max-width: 900px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-/* CARD */
+/* MAIN CARD */
 .card{
-    background: #fff;
-    color: #333;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    width:380px;
+    background:linear-gradient(180deg,#00a0dc,#0086c3);
+    color:white;
+    padding:30px;
+    border-radius:25px;
 }
 
-.card img{
-    width: 40px;
+/* BADGE */
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#1bb1e7;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:20px;
 }
 
-.card h3{
-    font-size: 18px;
+/* TITLE */
+.card h1{
+    font-size:28px;
+    margin-bottom:15px;
 }
 
 .card p{
-    font-size: 14px;
-    line-height: 1.6;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:25px;
 }
 
-/* BOTTOM TEXT */
-.exchange-section h4{
-    margin-top: 50px;
-    font-size: 20px;
+/* INFO BOXES */
+.info{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
 }
 
-/* BUTTON */
-.exchange-section button{
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    background: #2ecc71;
-    color: #fff;
-    font-size: 14px;
-    cursor: pointer;
+.icon{
+    width:40px;
+    height:40px;
+    background:white;
+    color:#0086c3;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
 }
-    </style>
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:space-between;
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:15px;
+    margin:25px 0;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:22px;
+}
+
+.stat p{
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* SOCIAL */
+.social{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons div{
+    width:36px;
+    height:36px;
+    background:#1bb1e7;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+</style>
+</head><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f2f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* MAIN CARD */
+.card{
+    width:380px;
+    background:linear-gradient(180deg,#00a0dc,#0086c3);
+    color:white;
+    padding:30px;
+    border-radius:25px;
+}
+
+/* BADGE */
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#1bb1e7;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+/* TITLE */
+.card h1{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+/* INFO BOXES */
+.info{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.icon{
+    width:40px;
+    height:40px;
+    background:white;
+    color:#0086c3;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:space-between;
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:15px;
+    margin:25px 0;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:22px;
+}
+
+.stat p{
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* SOCIAL */
+.social{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons div{
+    width:36px;
+    height:36px;
+    background:#1bb1e7;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+</style>
+</head><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f2f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* MAIN CARD */
+.card{
+    width:380px;
+    background:linear-gradient(180deg,#00a0dc,#0086c3);
+    color:white;
+    padding:30px;
+    border-radius:25px;
+}
+
+/* BADGE */
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#1bb1e7;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+/* TITLE */
+.card h1{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+/* INFO BOXES */
+.info{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.icon{
+    width:40px;
+    height:40px;
+    background:white;
+    color:#0086c3;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:space-between;
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:15px;
+    margin:25px 0;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:22px;
+}
+
+.stat p{
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* SOCIAL */
+.social{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons div{
+    width:36px;
+    height:36px;
+    background:#1bb1e7;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+</style>
+</head><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#f2f6f9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* MAIN CARD */
+.card{
+    width:380px;
+    background:linear-gradient(180deg,#00a0dc,#0086c3);
+    color:white;
+    padding:30px;
+    border-radius:25px;
+}
+
+/* BADGE */
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#1bb1e7;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+/* TITLE */
+.card h1{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+/* INFO BOXES */
+.info{
+    background:rgba(255,255,255,0.15);
+    padding:15px;
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.icon{
+    width:40px;
+    height:40px;
+    background:white;
+    color:#0086c3;
+    border-radius:12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+/* STATS */
+.stats{
+    display:flex;
+    justify-content:space-between;
+    background:rgba(255,255,255,0.15);
+    padding:20px;
+    border-radius:15px;
+    margin:25px 0;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    font-size:22px;
+}
+
+.stat p{
+    font-size:12px;
+    margin-top:5px;
+}
+
+/* SOCIAL */
+.social{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.social-icons{
+    display:flex;
+    gap:10px;
+}
+
+.social-icons div{
+    width:36px;
+    height:36px;
+    background:#1bb1e7;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+</style>
 </head>
 <body>
-    <section class="exchange-section">
+    <div class="card">
 
-    <h2>Rule The Exchange</h2>
-
-    <div class="card-container">
-
-        <!-- CARD 1 -->
-        <div class="card">
-            <img src="https://cdn-icons-png.flaticon.com/512/29/29302.png" alt="Knowledge">
-            <h3>Knowledge Base</h3>
-            <p>
-                Sharpen up your trading know-how with our comprehensive
-                Knowledge Base containing helpful instructions and tutorials.
-            </p>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="card">
-            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Support">
-            <h3>24/7 Support</h3>
-            <p>
-                We're here for you when you need us with 24/7 Support via both
-                live chat and help desk.
-            </p>
-        </div>
-
+    <div class="badge">
+        💬 GET IN TOUCH
     </div>
 
-    <h4>You’ll wonder how you ever lived without us</h4>
-    <button>Get Started for Free</button>
+    <h1>Let's Bring Your Vision to Life</h1>
 
-</section>
+    <p>
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+        aut odit aut fugit, sed quia consequuntur magni dolores.
+    </p>
+
+    <div class="info">
+        <div class="icon">✉</div>
+        <div>
+            <small>EMAIL US</small><br>
+            support@example.com
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="icon">📞</div>
+        <div>
+            <small>CALL US</small><br>
+            +1 (555) 890-1234
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="icon">📍</div>
+        <div>
+            <small>VISIT US</small><br>
+            1847 Oak Avenue, Portland, OR 97201
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stat">
+            <h2>98%</h2>
+            <p>SATISFACTION</p>
+        </div>
+        <div class="stat">
+            <h2>24/7</h2>
+            <p>SUPPORT</p>
+        </div>
+        <div class="stat">
+            <h2>3.2k</h2>
+            <p>PROJECTS</p>
+        </div>
+    </div>
+
+    <div class="social">
+        <strong>Follow Us</strong>
+        <div class="social-icons">
+            <div>f</div>
+            <div>X</div>
+            <div>in</div>
+            <div>📷</div>
+        </div>
+    </div>
+
+</div>
+
+    
 </body>
 </html>
