@@ -1,80 +1,194 @@
-// ===============================
-// 1. LET AND CONST
-// ===============================
+let price = 500;
+let quantity = 3;
 
-console.log("=== LET AND CONST ===");
+let totalPrice = price * quantity;
 
-// let example
-let marks = 80;
-marks = 90; // update allowed
-console.log("Marks:", marks);
-
-// const example
-const pi = 3.14;
-// pi = 3.1416; ❌ not allowed
-console.log("Value of PI:", pi);
-
-// var example (not recommended)
-var age = 18;
-var age = 20; // redeclare allowed
-console.log("Age:", age);
+console.log("Total Price:", totalPrice);
 
 
-// ===============================
-// 2. DATA TYPES
-// ===============================
+//2
+let amount = 1000;
 
-console.log("=== DATA TYPES ===");
+let discount = amount * 0.10;
+let finalPrice = amount - discount;
 
-// String
-let name = "Ali";
-console.log(name, typeof name);
+console.log("Final Price:", finalPrice);
 
-// Number
-let number = 100;
-console.log(number, typeof number);
+//3
+let bill = 2000;
 
-// Boolean
-let isStudent = true;
-console.log(isStudent, typeof isStudent);
+let tax = bill * 0.18;
+let totalBill = bill + tax;
 
-// undefined
-let x;
-console.log(x, typeof x);
+console.log("Total Bill:", totalBill);
 
-// null
-let y = null;
-console.log(y, typeof y);
+//4
+let weight = 70;   // kg
+let height = 1.75; // meters
+
+let bmi = weight / (height * height);
+
+console.log("BMI:", bmi);
 
 
-// ===============================
-// 3. USER INPUT
-// ===============================
+//5
+let salary = 50000;
 
-console.log("=== USER INPUT ===");
+let tax2 = salary * 0.10;
+let netSalary = salary - tax;
 
-// Take name input
-let userName = prompt("Enter your name:");
-console.log("Hello " + userName);
-
-// Take number input (string by default)
-let num1 = prompt("Enter first number:");
-let num2 = prompt("Enter second number");
-
-// Convert to number
-num1 = Number(num1);
-num2 = Number(num2);
-
-// Add numbers
-let sum = num1 + num2;
-
-console.log("Sum is:", sum);
+console.log("Net Salary:", netSalary);
 
 
-// ===============================
-// EXTRA PRACTICE
-// ===============================
 
-// Show type after conversion
-console.log(typeof num1);
-console.log(typeof num2);
+
+//6
+let r1 = 4, r2 = 5, r3 = 3, r4 = 4, r5 = 5;
+
+let average = (r1 + r2 + r3 + r4 + r5) / 5;
+
+console.log("Average Rating:", average);
+            
+
+
+
+//7
+let orderAmount = 800;
+let delivery;
+
+if(orderAmount > 1000){
+    delivery = 0;
+}
+else{
+    delivery = 100;
+}
+
+console.log("Delivery Charges:", delivery);
+
+
+
+
+
+
+//8
+let principal = 10000;
+let rate = 5;
+let time = 2;
+
+let interest = (principal * rate * time) / 100;
+
+console.log("Simple Interest:", interest);
+
+
+
+
+
+//9
+let balance = 5000;
+let withdraw = 1500;
+
+let remaining = balance - withdraw;
+
+console.log("Remaining Balance:", remaining);
+
+
+
+
+
+
+//10
+let minutes = 130;
+
+let hours = Math.floor(minutes / 60);
+let remainingMinutes = minutes % 60;
+
+console.log(hours + " hours " + remainingMinutes + " minutes");
+
+
+
+
+
+//11
+let username = "admin";
+let password = "1234";
+
+if(username === "admin" && password === "1234"){
+    console.log("Login Successful");
+}
+else{
+    console.log("Invalid Login");
+}
+
+
+
+
+
+//12
+let age = 16;
+
+if(age >= 18){
+    console.log("Access Granted");
+}
+else{
+    console.log("Access Denied");
+}
+
+
+
+
+//13
+let purchase = 150;
+
+if(purchase > 200){
+    console.log("20% Discount");
+}
+else if(purchase > 100){
+    console.log("10% Discount");
+}
+else{
+    console.log("No Discount");
+}
+
+
+
+
+
+
+//14
+let marks = 75;
+
+if(marks >= 80){
+    console.log("Grade A");
+}
+else if(marks >= 60){
+    console.log("Grade B");
+}
+else if(marks >= 50){
+    console.log("Grade C");
+}
+else{
+    console.log("Fail");
+}
+
+
+
+
+//15
+let weather = "hot";
+
+if(weather === "hot"){
+    console.log("Stay cool");
+}
+else if(weather === "cold"){
+    console.log("Wear warm clothes");
+}
+else if(weather === "rainy"){
+    console.log("Take umbrella");
+}
+else{
+    console.log("Normal weather");
+}
+
+
+
+
