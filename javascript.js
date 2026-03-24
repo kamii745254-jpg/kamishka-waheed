@@ -1,194 +1,143 @@
-let price = 500;
-let quantity = 3;
+// ===============================
+// 1️⃣ GROCERY BILL CALCULATOR
+// ===============================
 
-let totalPrice = price * quantity;
+function calculateBill() {
+    let items = Number(prompt("Enter number of items:"));
+    let total = 0;
 
-console.log("Total Price:", totalPrice);
+    for(let i = 1; i <= items; i++){
+        let price = Number(prompt("Enter price of item " + i));
+        total += price;
+    }
 
+    if(total > 5000){
+        total = total - (total * 0.10);
+        alert("10% Discount Applied");
+    }
 
-//2
-let amount = 1000;
-
-let discount = amount * 0.10;
-let finalPrice = amount - discount;
-
-console.log("Final Price:", finalPrice);
-
-//3
-let bill = 2000;
-
-let tax = bill * 0.18;
-let totalBill = bill + tax;
-
-console.log("Total Bill:", totalBill);
-
-//4
-let weight = 70;   // kg
-let height = 1.75; // meters
-
-let bmi = weight / (height * height);
-
-console.log("BMI:", bmi);
-
-
-//5
-let salary = 50000;
-
-let tax2 = salary * 0.10;
-let netSalary = salary - tax;
-
-console.log("Net Salary:", netSalary);
-
-
-
-
-//6
-let r1 = 4, r2 = 5, r3 = 3, r4 = 4, r5 = 5;
-
-let average = (r1 + r2 + r3 + r4 + r5) / 5;
-
-console.log("Average Rating:", average);
-            
-
-
-
-//7
-let orderAmount = 800;
-let delivery;
-
-if(orderAmount > 1000){
-    delivery = 0;
-}
-else{
-    delivery = 100;
+    alert("Final Bill: " + total);
 }
 
-console.log("Delivery Charges:", delivery);
+calculateBill();
 
 
+// ===============================
+// 2️⃣ STUDENT RESULT SYSTEM
+// ===============================
 
-
-
-
-//8
-let principal = 10000;
-let rate = 5;
-let time = 2;
-
-let interest = (principal * rate * time) / 100;
-
-console.log("Simple Interest:", interest);
-
-
-
-
-
-//9
-let balance = 5000;
-let withdraw = 1500;
-
-let remaining = balance - withdraw;
-
-console.log("Remaining Balance:", remaining);
-
-
-
-
-
-
-//10
-let minutes = 130;
-
-let hours = Math.floor(minutes / 60);
-let remainingMinutes = minutes % 60;
-
-console.log(hours + " hours " + remainingMinutes + " minutes");
-
-
-
-
-
-//11
-let username = "admin";
-let password = "1234";
-
-if(username === "admin" && password === "1234"){
-    console.log("Login Successful");
-}
-else{
-    console.log("Invalid Login");
+function calculateGrade(avg){
+    if(avg >= 80) return "A";
+    else if(avg >= 60) return "B";
+    else if(avg >= 40) return "C";
+    else return "Fail";
 }
 
+function studentResult(){
+    let name = prompt("Enter student name:");
+    let total = 0;
 
+    for(let i = 1; i <= 5; i++){
+        let marks = Number(prompt("Enter marks of subject " + i));
+        total += marks;
+    }
 
+    let average = total / 5;
+    let grade = calculateGrade(average);
 
-
-//12
-let age = 16;
-
-if(age >= 18){
-    console.log("Access Granted");
-}
-else{
-    console.log("Access Denied");
-}
-
-
-
-
-//13
-let purchase = 150;
-
-if(purchase > 200){
-    console.log("20% Discount");
-}
-else if(purchase > 100){
-    console.log("10% Discount");
-}
-else{
-    console.log("No Discount");
+    alert("Name: " + name +
+          "\nTotal: " + total +
+          "\nAverage: " + average +
+          "\nGrade: " + grade);
 }
 
+studentResult();
 
 
+// ===============================
+// 3️⃣ ATM WITHDRAWAL SYSTEM
+// ===============================
 
+function withdrawMoney(){
+    let balance = 10000;
 
+    for(let i = 1; i <= 3; i++){
+        let amount = Number(prompt("Enter amount to withdraw:"));
 
-//14
-let marks = 75;
-
-if(marks >= 80){
-    console.log("Grade A");
-}
-else if(marks >= 60){
-    console.log("Grade B");
-}
-else if(marks >= 50){
-    console.log("Grade C");
-}
-else{
-    console.log("Fail");
-}
-
-
-
-
-//15
-let weather = "hot";
-
-if(weather === "hot"){
-    console.log("Stay cool");
-}
-else if(weather === "cold"){
-    console.log("Wear warm clothes");
-}
-else if(weather === "rainy"){
-    console.log("Take umbrella");
-}
-else{
-    console.log("Normal weather");
+        if(amount > balance){
+            alert("Insufficient Balance");
+        } else {
+            balance -= amount;
+            alert("Withdrawal Successful\nRemaining Balance: " + balance);
+            break;
+        }
+    }
 }
 
+withdrawMoney();
 
 
+// ===============================
+// 4️⃣ RESTAURANT ORDER SYSTEM
+// ===============================
 
+function calculateOrder(){
+    let burger = 500;
+    let pizza = 1200;
+    let drink = 200;
+
+    let item = prompt("Enter item (burger/pizza/drink):").toLowerCase();
+    let quantity = Number(prompt("Enter quantity:"));
+
+    let price = 0;
+
+    if(item === "burger") price = burger;
+    else if(item === "pizza") price = pizza;
+    else if(item === "drink") price = drink;
+    else{
+        alert("Invalid item");
+        return;
+    }
+
+    let total = price * quantity;
+
+    if(total > 2000){
+        total = total - (total * 0.15);
+        alert("15% Discount Applied");
+    }
+
+    alert("Final Bill: " + total);
+}
+
+calculateOrder();
+
+
+// ===============================
+// 5️⃣ EMPLOYEE SALARY CALCULATOR
+// ===============================
+
+function calculateSalary(hours){
+    let rate = 500;
+    let salary;
+
+    if(hours > 40){
+        salary = (40 * rate) + ((hours - 40) * rate * 1.5);
+    } else {
+        salary = hours * rate;
+    }
+
+    return salary;
+}
+
+function employeeSystem(){
+    for(let i = 1; i <= 3; i++){
+        let name = prompt("Enter employee name:");
+        let hours = Number(prompt("Enter hours worked:"));
+
+        let salary = calculateSalary(hours);
+
+        alert("Employee: " + name + "\nSalary: " + salary);
+    }
+}
+
+employeeSystem();
